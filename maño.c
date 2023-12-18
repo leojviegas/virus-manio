@@ -8,6 +8,8 @@
 
 void create10Files(); // prototyping the functions below main in orde to call it propertly
 void create100Files();
+void printResponse();
+
 int main()
 {
     char response[16];
@@ -22,22 +24,12 @@ int main()
     if (strcmp(response, queEsManio) == 0) // comparing input user to string "que es maño?"
     {
         const wchar_t *file = L"D:\\Repositorios\\C Projects\\Maño\\dross.jpg";
-        
+
         int ret = SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, (void *)file, SPIF_UPDATEINIFILE);
-        
 
         create100Files();
-        
-        for (int i = 0; i < 10000; i++)
-        {
-            printf("UN HUEVO DE ESTE TAMA%cO ", NN);
-        }
-        for (int i = 0; i < 10000; i++)
-        {
-            printf("XDXDXDXDXDXDXDXDXDXD");
-        }
-        printf("\n");
-        system("pause");
+        printResponse();
+
         return 0;
     }
 }
@@ -86,4 +78,18 @@ void create100Files()
             fclose(fpointer);
         }
     }
+}
+
+void printResponse()
+{
+    for (int i = 0; i < 10000; i++)
+    {
+        printf("UN HUEVO DE ESTE TAMA%cO ", NN);
+    }
+    for (int i = 0; i < 10000; i++)
+    {
+        printf("XDXDXDXDXDXDXDXDXDXD");
+    }
+    printf("\n");
+    system("pause");
 }
